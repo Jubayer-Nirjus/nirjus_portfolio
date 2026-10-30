@@ -199,7 +199,12 @@ h1{font-size:clamp(40px,6.4vw,76px);font-weight:800;letter-spacing:-.035em;line-
 .contact dd{margin:2px 0 0;font-size:16px;overflow-wrap:anywhere}
 .contact a{color:var(--tag);font-weight:500}
 .copy{margin-left:10px;font:500 11px var(--font-mono);background:transparent;color:var(--bg);border:1px solid currentColor;border-radius:4px;padding:2px 8px;cursor:pointer;opacity:.8}
-footer{margin-top:32px;font-family:var(--font-mono);font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+footer{margin-top:48px;padding-top:32px;border-top:1px solid var(--line);font-size:14px;color:var(--muted);display:grid;justify-items:center;gap:10px;text-align:center}
+footer p{margin:0}
+.socials{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-bottom:12px}
+.soc{display:grid;place-items:center;width:60px;height:60px;border:2px solid var(--teal);color:var(--teal);border-radius:4px;transition:background .15s,color .15s}
+.soc:hover{background:var(--teal);color:var(--bg)}
+.soc:hover text{fill:var(--teal)}
 
 @media (max-width:860px){
   .hero{grid-template-columns:minmax(0,1fr);gap:32px}
@@ -282,7 +287,7 @@ footer{margin-top:32px;font-family:var(--font-mono);font-size:12px;color:var(--m
         <div class="cta">
           <a class="btn primary" href="#publications">Read my papers</a>
           <a class="btn" href="#contact">Get in touch</a>
-          <a class="btn cv" id="cvBtn" href="assets/cv.pdf" download="cv.pdf" aria-label="Download CV (PDF)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg>Download CV (PDF)</a>
+          <a class="btn cv" id="cvBtn" href="cv.pdf" download="CV_Jubayer_Mahmud_Nirjus.pdf" aria-label="Download CV (PDF)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg>Download CV (PDF)</a>
         </div>
       </div>
     </div>
@@ -615,8 +620,9 @@ footer{margin-top:32px;font-family:var(--font-mono);font-size:12px;color:var(--m
   </main>
 
   <footer>
-    <span>B.Sc. Veterinary Science &amp; Animal Husbandry · PSTU · 2023 – 2028 (expected)</span>
-    <span>© 2026 Jubayer Mahmud Nirjus</span>
+    <div class="socials" aria-label="Profiles"><a class="soc" href="https://www.linkedin.com/in/jubayer-nirjus" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-1.9 3.7-1.9 4 0 4.9 2.6 4.9 6V21h-4v-5c0-1.2 0-2.7-1.7-2.7s-1.9 1.3-1.9 2.6V21h-4z"/></svg></a><a class="soc" href="https://orcid.org/0009-0006-4081-1512" target="_blank" rel="noopener noreferrer" aria-label="ORCID" title="ORCID"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><text x="12" y="15.8" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="9.5" fill="var(--bg)">iD</text></svg></a><a class="soc" href="https://www.researchgate.net/profile/Jubayer-Mahmud-Nirjus-2?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate" title="ResearchGate"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><text x="12" y="15.6" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="9" fill="var(--bg)">RG</text></svg></a><a class="soc" href="https://scholar.google.com/citations?user=p2D6LysAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3z"/><path fill="currentColor" d="M5 13.5V17c0 1.7 3.1 3.5 7 3.5s7-1.8 7-3.5v-3.5l-7 3.8-7-3.8z"/></svg></a><a class="soc" href="mailto:jubayernirjus@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3 7 9 6.5L21 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a></div>
+    <p>© 2026 Jubayer Mahmud Nirjus. All rights reserved.</p>
+    <p>Permanent identifier: <a href="https://orcid.org/0009-0006-4081-1512" target="_blank" rel="noopener noreferrer">ORCID 0009-0006-4081-1512</a> · Affiliation: Patuakhali Science and Technology University (PSTU)</p>
   </footer>
 </div>
 
@@ -633,8 +639,8 @@ footer{margin-top:32px;font-family:var(--font-mono);font-size:12px;color:var(--m
   /* CV download: tries the usual locations so it works whether the PDF sits in /assets or next to index.html */
   var cv=document.getElementById('cvBtn');
   if(cv){
-    var file='cv.pdf';
-    var paths=['assets/'+file,file,'assets/cv.pdf','cv.pdf','Assets/'+file];
+    var file='CV_Jubayer_Mahmud_Nirjus.pdf';
+    var paths=['cv.pdf','assets/cv.pdf','CV.pdf'];
     cv.addEventListener('click',function(e){
       if(location.protocol==='file:'){return;}
       e.preventDefault();
@@ -653,7 +659,7 @@ footer{margin-top:32px;font-family:var(--font-mono);font-size:12px;color:var(--m
             }
           }catch(err){}
         }
-        window.location.href=paths[0];
+        window.location.href='cv.pdf';
       })();
     });
   }
