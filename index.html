@@ -190,17 +190,11 @@ h1{font-size:clamp(40px,6.4vw,76px);font-weight:800;letter-spacing:-.035em;line-
 .copy-status{display:block;min-height:1.5em;margin-top:6px;font-size:12px}
 @media(max-width:640px){.pipeline-grid,.fieldwork-grid{grid-template-columns:minmax(0,1fr)}.fieldwork-feature{grid-row:auto}.fieldwork-feature .fieldwork-art{min-height:170px}.pipeline-card{padding:24px}}
 
-/* contact */
-.contact{margin-top:72px;background:var(--fg);color:var(--bg);border-radius:16px;padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px}
-.contact h2{font-size:clamp(30px,5vw,52px);font-weight:800;letter-spacing:-.03em}
-.contact p{margin:14px 0 0;max-width:42ch;opacity:.85}
-.contact dl{margin:0;display:grid;gap:14px;align-content:center;min-width:0}
-.contact dt{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;opacity:.65}
-.contact dd{margin:2px 0 0;font-size:16px;overflow-wrap:anywhere}
-.contact a{color:var(--tag);font-weight:500}
-.copy{margin-left:10px;font:500 11px var(--font-mono);background:transparent;color:var(--bg);border:1px solid currentColor;border-radius:4px;padding:2px 8px;cursor:pointer;opacity:.8}
 footer{margin-top:48px;padding-top:32px;border-top:1px solid var(--line);font-size:14px;color:var(--muted);display:grid;justify-items:center;gap:10px;text-align:center}
 footer p{margin:0}
+footer{scroll-margin-top:24px}
+footer h2{font-size:clamp(26px,4vw,40px);color:var(--fg);max-width:22ch}
+footer .lead-in{max-width:52ch;font-size:16px;margin-bottom:8px}
 .socials{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-bottom:12px}
 .soc{display:grid;place-items:center;width:60px;height:60px;border:2px solid var(--teal);color:var(--teal);border-radius:4px;transition:background .15s,color .15s}
 .soc:hover{background:var(--teal);color:var(--bg)}
@@ -602,24 +596,11 @@ footer p{margin:0}
       </ul>
     </section>
 
-    <section id="contact" style="padding-top:0">
-      <div class="contact">
-        <div>
-          <span class="label" style="color:inherit;opacity:.65">Contact</span>
-          <h2 style="margin-top:10px">Let's work on animal welfare together.</h2>
-          <p>Open to research collaborations, graduate opportunities and conversations about AI, AMR and One Health.</p>
-        </div>
-        <dl>
-          <div><dt>Email</dt><dd><a id="mail" href="mailto:jubayernirjus@gmail.com">jubayernirjus@gmail.com</a><button class="copy" id="copyMail" type="button">Copy Email</button><span class="copy-status" id="copyStatus" role="status" aria-live="polite"></span></dd></div>
-          <div><dt>Profiles</dt><dd><a href="https://www.linkedin.com/in/jubayer-nirjus" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://orcid.org/0009-0006-4081-1512" target="_blank" rel="noopener noreferrer">ORCID 0009-0006-4081-1512</a></dd></div>
-          <div><dt>Academic profiles</dt><dd><a href="https://www.researchgate.net/profile/Jubayer-Mahmud-Nirjus-2?ev=hdr_xprf" target="_blank" rel="noopener noreferrer">ResearchGate</a> · <a href="https://scholar.google.com/citations?user=p2D6LysAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></dd></div>
-          <div><dt>Based at</dt><dd>Faculty of Animal Science and Veterinary Medicine, Patuakhali Science and Technology University, Bangladesh</dd></div>
-        </dl>
-      </div>
-    </section>
   </main>
 
-  <footer>
+  <footer id="contact">
+    <h2>Let's work on animal welfare together.</h2>
+    <p class="lead-in">Open to research collaborations, graduate opportunities and conversations about AI, AMR and One Health.</p>
     <div class="socials" aria-label="Profiles"><a class="soc" href="https://www.linkedin.com/in/jubayer-nirjus" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-1.9 3.7-1.9 4 0 4.9 2.6 4.9 6V21h-4v-5c0-1.2 0-2.7-1.7-2.7s-1.9 1.3-1.9 2.6V21h-4z"/></svg></a><a class="soc" href="https://orcid.org/0009-0006-4081-1512" target="_blank" rel="noopener noreferrer" aria-label="ORCID" title="ORCID"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><text x="12" y="15.8" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="9.5" fill="var(--bg)">iD</text></svg></a><a class="soc" href="https://www.researchgate.net/profile/Jubayer-Mahmud-Nirjus-2?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate" title="ResearchGate"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><text x="12" y="15.6" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="9" fill="var(--bg)">RG</text></svg></a><a class="soc" href="https://scholar.google.com/citations?user=p2D6LysAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3z"/><path fill="currentColor" d="M5 13.5V17c0 1.7 3.1 3.5 7 3.5s7-1.8 7-3.5v-3.5l-7 3.8-7-3.8z"/></svg></a><a class="soc" href="mailto:jubayernirjus@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3 7 9 6.5L21 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a></div>
     <p>© 2026 Jubayer Mahmud Nirjus. All rights reserved.</p>
     <p>Permanent identifier: <a href="https://orcid.org/0009-0006-4081-1512" target="_blank" rel="noopener noreferrer">ORCID 0009-0006-4081-1512</a> · Affiliation: Patuakhali Science and Technology University (PSTU)</p>
@@ -663,29 +644,6 @@ footer p{margin:0}
       })();
     });
   }
-  var cb=document.getElementById('copyMail');
-  var copyStatus=document.getElementById('copyStatus');
-  var copyTimer;
-  cb.addEventListener('click',async function(){
-    var mail=document.getElementById('mail');
-    cb.disabled=true;
-    clearTimeout(copyTimer);
-    try{
-      await navigator.clipboard.writeText(mail.textContent.trim());
-      cb.textContent='Copied!';
-      copyStatus.textContent='Email address copied to clipboard.';
-    }catch(e){
-      var range=document.createRange();
-      range.selectNodeContents(mail);
-      var selection=window.getSelection();
-      if(selection){selection.removeAllRanges();selection.addRange(range);}
-      cb.textContent='Copy Email';
-      copyStatus.textContent='Copy unavailable. Email selected; use your device’s copy command.';
-    }finally{
-      cb.disabled=false;
-      copyTimer=setTimeout(function(){cb.textContent='Copy Email';copyStatus.textContent='';},3000);
-    }
-  });
 })();
 </script>
 
