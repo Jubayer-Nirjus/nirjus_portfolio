@@ -1,0 +1,600 @@
+<!doctype html><html lang="en"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Jubayer Mahmud Nirjus | Veterinary Research &amp; One Health</title>
+<meta name="description" content="Research portfolio of Jubayer Mahmud Nirjus: animal welfare, wearable sensor analytics, precision livestock farming and One Health epidemiology.">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one long page. Hero pairs the name with a portrait and a connected One Health research figure;
+   below it, sections read like a lab notebook with mono labels and yellow ear-tag accents. */
+:root{
+  --bg:#EDF0EA;
+  --surface:#F8F9F5;
+  --fg:#12202E;
+  --muted:#4F5F6B;
+  --line:#C9D1CA;
+  --tag:#EDB100;
+  --tag-ink:#12202E;
+  --teal:#0E6862;
+  --teal-soft:#D6E7E2;
+  --font-display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --font-body:'Public Sans','Segoe UI',system-ui,sans-serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1926;--surface:#15243A;--fg:#E6ECF1;--muted:#9AABB9;--line:#273A52;
+    --tag:#F2B705;--tag-ink:#12202E;--teal:#52C7BB;--teal-soft:#16363A;color-scheme:dark}
+}
+:root[data-theme="dark"]{
+  --bg:#0E1926;--surface:#15243A;--fg:#E6ECF1;--muted:#9AABB9;--line:#273A52;
+  --tag:#F2B705;--tag-ink:#12202E;--teal:#52C7BB;--teal-soft:#16363A;color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16px;line-height:1.65;
+  padding-block:0 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+a{color:var(--teal);text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--tag);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin-inline:auto}
+section{padding-block:64px 8px;scroll-margin-top:16px}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;line-height:1.1;margin:0}
+.label{font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h2{font-size:clamp(28px,4vw,40px);font-weight:700;letter-spacing:-.02em}
+.sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:32px;max-width:62ch}
+.sec-head p{margin:0;color:var(--muted)}
+
+/* top bar */
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:20px;flex-wrap:wrap}
+.mark{font-family:var(--font-mono);font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:10px;color:var(--fg);text-decoration:none}
+.mark i{display:inline-block;width:14px;height:20px;background:var(--tag);border-radius:3px 3px 7px 7px;position:relative}
+.mark i::after{content:"";position:absolute;left:50%;top:4px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:var(--bg)}
+nav{display:flex;gap:6px 18px;flex-wrap:wrap;font-size:14px;align-items:center}
+nav a{color:var(--fg);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--tag)}
+#themeBtn{font:500 12px var(--font-mono);letter-spacing:.06em;background:transparent;color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer}
+#themeBtn:hover{border-color:var(--fg)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:center;padding-block:40px 24px}
+.hero-visuals{display:grid;gap:20px;min-width:0}
+.portrait{margin:0;padding:10px;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+.portrait img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center 35%;border-radius:7px}
+.portrait figcaption{padding:12px 6px 4px;border-left:3px solid var(--tag);margin-top:10px;padding-left:12px}
+.portrait figcaption strong{display:block;font-family:var(--font-display);font-size:18px;line-height:1.3}
+.portrait figcaption span{display:block;font-family:var(--font-mono);font-size:11px;color:var(--muted);margin-top:4px}
+.status{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;
+  background:var(--tag);color:var(--tag-ink);padding:6px 14px 6px 10px;border-radius:4px 14px 14px 4px;font-weight:500}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--tag-ink);opacity:.8}
+h1{font-size:clamp(44px,8vw,92px);font-weight:800;letter-spacing:-.035em;margin-block:22px 20px}
+h1 span{display:block}
+.lede{font-size:clamp(17px,2vw,20px);max-width:52ch;margin:0 0 26px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px;padding:0;list-style:none}
+.chips li{font-family:var(--font-mono);font-size:12px;padding:5px 11px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;text-decoration:none;padding:12px 20px;border-radius:8px;border:1.5px solid var(--fg);color:var(--fg)}
+.btn.primary{background:var(--fg);color:var(--bg)}
+.btn:hover{transform:translateY(-1px)}
+.vis{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px;min-width:0}
+.vis svg{display:block;width:100%;height:auto}
+.vis figcaption{font-family:var(--font-mono);font-size:11px;color:var(--muted);padding:8px 6px 2px;letter-spacing:.04em}
+.research-figure .figure-line{fill:none;stroke:var(--teal);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.research-figure .figure-label{font-family:var(--font-mono);font-size:11px;fill:var(--muted);letter-spacing:1px}
+.research-figure .figure-title{font-family:var(--font-display);font-size:30px;font-weight:700;fill:var(--fg);letter-spacing:-1px}
+.research-figure .figure-node{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.research-figure .figure-orbit{fill:none;stroke:var(--teal);stroke-width:1;stroke-dasharray:3 8;opacity:.45}
+.research-figure .figure-dot{fill:var(--tag);stroke:var(--surface);stroke-width:3}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* facts strip */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0;border-block:1px solid var(--line);margin-top:40px}
+.fact{padding:18px 18px 18px 0;display:flex;flex-direction:column;gap:2px;min-width:0}
+.fact b{font-family:var(--font-display);font-size:34px;font-weight:700;letter-spacing:-.02em;line-height:1;font-variant-numeric:tabular-nums}
+.fact span{font-size:13px;color:var(--muted)}
+
+/* research areas */
+.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.area{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.area h3{font-size:22px;font-weight:700;letter-spacing:-.01em}
+.area p{margin:0;color:var(--muted);font-size:15px}
+.area ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.area li{font-family:var(--font-mono);font-size:11.5px;background:var(--teal-soft);color:var(--fg);padding:3px 9px;border-radius:4px}
+
+/* publications */
+.pubs{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.pub{display:grid;grid-template-columns:96px minmax(0,1fr);gap:8px 24px;padding-block:24px;border-bottom:1px solid var(--line)}
+.pub .yr{font-family:var(--font-display);font-size:34px;font-weight:700;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.pub h3{font-size:clamp(18px,2.2vw,22px);font-weight:600;line-height:1.3;letter-spacing:-.005em;margin-bottom:8px}
+.pub .au{font-size:14px;color:var(--muted);margin:0 0 8px}
+.pub .au b{color:var(--fg);font-weight:600}
+.venue{font-family:var(--font-mono);font-size:12.5px;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.venue em{font-style:normal;background:var(--tag);color:var(--tag-ink);padding:2px 8px;border-radius:3px;font-weight:500}
+
+/* experience */
+.xp{display:grid;gap:0;border-top:1px solid var(--line)}
+.role{display:grid;grid-template-columns:200px minmax(0,1fr);gap:8px 32px;padding-block:28px;border-bottom:1px solid var(--line)}
+.role .when{font-family:var(--font-mono);font-size:13px;color:var(--muted);padding-top:4px}
+.role h3{font-size:22px;font-weight:700;letter-spacing:-.01em;margin-bottom:4px}
+.role .org{color:var(--teal);font-weight:600;font-size:15px;margin:0 0 12px}
+.role ul{margin:0;padding-left:20px;display:grid;gap:8px;font-size:15.5px}
+.role li::marker{color:var(--tag)}
+
+/* honors + talks */
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:26px;min-width:0}
+.card.win{background:var(--tag);color:var(--tag-ink);border-color:var(--tag)}
+.card.win .label{color:var(--tag-ink);opacity:.8}
+.card h3{font-size:24px;font-weight:700;margin:10px 0 10px;letter-spacing:-.01em}
+.card p{margin:0 0 8px;font-size:15px}
+.card.win p{color:var(--tag-ink)}
+.talk{padding-block:14px;border-top:1px solid var(--line)}
+.talk:first-of-type{border-top:0;padding-top:4px}
+.talk h4{font-family:var(--font-display);font-size:17px;font-weight:600;line-height:1.35;margin:0 0 4px}
+.talk p{font-size:14px;color:var(--muted);margin:0}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px 32px}
+.skill h3{font-family:var(--font-mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--tag);display:inline-block}
+.skill ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.skill li{font-size:14px;padding:4px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+
+/* certs + leadership */
+.list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.list li{display:grid;grid-template-columns:70px minmax(0,1fr);gap:4px 20px;padding-block:14px;border-bottom:1px solid var(--line);font-size:15px}
+.list .k{font-family:var(--font-mono);font-size:12.5px;color:var(--muted);padding-top:2px}
+.list small{display:block;color:var(--muted);font-size:13.5px}
+.lead li{grid-template-columns:minmax(0,1fr) auto}
+.lead .k{white-space:nowrap}
+
+/* Research pipeline and illustrated fieldwork cards */
+.btn.cv{background:var(--tag);border-color:var(--tag);color:var(--tag-ink)}
+.btn svg{flex-shrink:0}
+.pipeline-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:20px}
+.pipeline-card{display:flex;flex-direction:column;align-items:flex-start;padding:28px;background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--teal);border-radius:0 0 12px 12px;min-width:0}
+.pipeline-card h3{font-size:26px;line-height:1.2;margin:16px 0 12px}
+.pipeline-card p{color:var(--muted);margin:0 0 16px;font-size:15px}
+.pipeline-card .project-note{font-family:var(--font-mono);font-size:12px;color:var(--teal);margin-top:auto}
+.project-tags{list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0}
+.project-tags li{font:11px var(--font-mono);padding:6px 9px;background:var(--teal-soft);border-radius:4px}
+.fieldwork-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}
+.fieldwork-card{overflow:hidden;border:1px solid var(--line);border-radius:12px;background:var(--surface);min-width:0}
+.fieldwork-feature{grid-row:span 2;display:flex;flex-direction:column}
+.fieldwork-art{position:relative;background:var(--teal-soft);padding:12px 24px 38px;display:grid;align-content:center;min-height:170px}
+.fieldwork-feature .fieldwork-art{flex:1;min-height:300px}
+.fieldwork-art svg{width:100%;max-height:220px;stroke:var(--teal);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.fieldwork-art span{position:absolute;bottom:16px;left:24px;font:12px var(--font-mono);color:var(--fg)}
+.fieldwork-copy{padding:24px}
+.fieldwork-copy h3{font-size:24px;margin:12px 0;line-height:1.2}
+.fieldwork-copy p{font-size:15px;color:var(--muted);margin:0}
+.copy{min-height:36px;padding:6px 10px}
+.copy-status{display:block;min-height:1.5em;margin-top:6px;font-size:12px}
+@media(max-width:640px){.pipeline-grid,.fieldwork-grid{grid-template-columns:minmax(0,1fr)}.fieldwork-feature{grid-row:auto}.fieldwork-feature .fieldwork-art{min-height:170px}.pipeline-card{padding:24px}}
+
+/* contact */
+.contact{margin-top:72px;background:var(--fg);color:var(--bg);border-radius:16px;padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px}
+.contact h2{font-size:clamp(30px,5vw,52px);font-weight:800;letter-spacing:-.03em}
+.contact p{margin:14px 0 0;max-width:42ch;opacity:.85}
+.contact dl{margin:0;display:grid;gap:14px;align-content:center;min-width:0}
+.contact dt{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;opacity:.65}
+.contact dd{margin:2px 0 0;font-size:16px;overflow-wrap:anywhere}
+.contact a{color:var(--tag);font-weight:500}
+.copy{margin-left:10px;font:500 11px var(--font-mono);background:transparent;color:var(--bg);border:1px solid currentColor;border-radius:4px;padding:2px 8px;cursor:pointer;opacity:.8}
+footer{margin-top:32px;font-family:var(--font-mono);font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:minmax(0,1fr)}
+  .role{grid-template-columns:minmax(0,1fr);gap:4px}
+  .contact{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:520px){
+  .pub{grid-template-columns:minmax(0,1fr)}
+  .pub .yr{font-size:26px}
+  .list li{grid-template-columns:minmax(0,1fr)}
+  .lead li{grid-template-columns:minmax(0,1fr)}
+  section{padding-top:48px}
+}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header class="bar">
+    <a class="mark" href="#top"><i aria-hidden="true"></i>J.M. NIRJUS</a>
+    <nav aria-label="Sections">
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#fieldwork">Fieldwork</a>
+      <a href="#experience">Experience</a>
+      <a href="#honors">Honors</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <button id="themeBtn" type="button" aria-label="Switch colour theme">THEME</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <span class="status">Undergraduate researcher · PSTU, Bangladesh</span>
+        <h1><span>Jubayer</span><span>Mahmud</span><span>Nirjus</span></h1>
+        <p class="lede">Veterinary science student using computer vision, wearable sensors and field epidemiology to improve animal welfare and reduce antibiotic misuse in livestock.</p>
+        <ul class="chips" aria-label="Research focus">
+          <li>AI for Animal Welfare</li>
+          <li>Precision Livestock Farming</li>
+          <li>One Health &amp; AMR</li>
+        </ul>
+        <div class="cta">
+          <a class="btn primary" href="#publications">Read my papers</a>
+          <a class="btn" href="#contact">Get in touch</a>
+          <a class="btn cv" href="assets/CV_Jubayer_Mahmud_Nirjus.pdf" download="CV_Jubayer_Mahmud_Nirjus.pdf" aria-label="Download CV (PDF)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg>Download CV (PDF)</a>
+        </div>
+      </div>
+
+      <div class="hero-visuals">
+      <figure class="portrait">
+        <img src="/assets/jubayer-mahmud-nirjus.webp" alt="Jubayer Mahmud Nirjus seated in a dark suit" width="800" height="800" fetchpriority="high" decoding="async">
+        <figcaption><strong>Jubayer Mahmud Nirjus</strong><span>Undergraduate researcher · PSTU, Bangladesh</span></figcaption>
+      </figure>
+      <figure class="vis research-figure" style="margin:0">
+        <svg viewBox="0 0 520 430" role="img" aria-labelledby="research-figure-title research-figure-desc">
+          <title id="research-figure-title">One Health, connected by research</title>
+          <desc id="research-figure-desc">A cow at the centre of a connected research network, linking AI and wearable sensing, people and antimicrobial resistance, and the environment. A conceptual figure of Jubayer's veterinary research interests.</desc>
+          <defs>
+            <pattern id="research-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+              <circle cx="1" cy="1" r="1" fill="var(--line)" opacity=".65"/>
+            </pattern>
+          </defs>
+          <rect x="8" y="8" width="504" height="414" rx="10" fill="url(#research-grid)"/>
+          <text class="figure-label" x="28" y="38">VETERINARY SCIENCE × TECHNOLOGY</text>
+          <circle cx="260" cy="219" r="139" class="figure-orbit"/>
+          <circle cx="260" cy="219" r="111" fill="var(--teal-soft)"/>
+          <path class="figure-line" opacity=".45" d="M260 108V88 M160 253L111 280 M359 253L409 280"/>
+          <!-- Central livestock motif, with a wearable collar and vision landmarks. -->
+          <g class="figure-line" stroke-width="3">
+            <path d="M186 201L198 182L218 186Q260 172 302 185L319 194V236L307 245L304 275H293L290 243H238L232 275H221L219 232L205 222L187 221L177 211Z" fill="var(--surface)"/>
+            <path d="M198 182L192 170 M205 184L211 173 M317 196Q334 211 329 240 M240 244L241 271 M278 244L279 271"/>
+            <path d="M218 188L211 222" stroke="var(--tag)" stroke-width="7"/>
+            <circle cx="196" cy="201" r="2" fill="var(--fg)" stroke="none"/>
+          </g>
+          <rect x="169" y="160" width="173" height="126" rx="13" fill="none" stroke="var(--teal)" stroke-dasharray="5 6" opacity=".5"/>
+          <path d="M169 178V160H187 M324 160H342V178 M169 268V286H187 M324 286H342V268" class="figure-line"/>
+          <circle cx="234" cy="190" r="4" class="figure-dot"/>
+          <circle cx="300" cy="191" r="4" class="figure-dot"/>
+          <text class="figure-label" x="260" y="311" text-anchor="middle">ANIMAL WELFARE</text>
+          <!-- Sensing node. -->
+          <rect x="185" y="55" width="150" height="56" rx="12" class="figure-node"/>
+          <path class="figure-line" d="M201 82H211L216 70L222 94L229 77L234 82H246"/>
+          <text class="figure-label" x="258" y="79">AI +</text>
+          <text class="figure-label" x="258" y="96">SENSING</text>
+          <!-- People and AMR node. -->
+          <circle cx="96" cy="295" r="43" class="figure-node"/>
+          <g class="figure-line">
+            <circle cx="96" cy="282" r="9"/>
+            <path d="M78 315V308C78 290 114 290 114 308V315 M90 309H102 M96 303V315"/>
+          </g>
+          <text class="figure-label" x="96" y="361" text-anchor="middle">PEOPLE + AMR</text>
+          <!-- Environment node. -->
+          <circle cx="424" cy="295" r="43" class="figure-node"/>
+          <g class="figure-line">
+            <path d="M410 310Q400 278 440 276Q446 310 415 308 M411 316L432 287 M420 302L420 290 M421 301L434 300"/>
+          </g>
+          <text class="figure-label" x="424" y="361" text-anchor="middle">ENVIRONMENT</text>
+          <circle cx="260" cy="127" r="5" class="figure-dot"/>
+          <circle cx="145" cy="263" r="5" class="figure-dot"/>
+          <circle cx="375" cy="263" r="5" class="figure-dot"/>
+          <text class="figure-title" x="260" y="399" text-anchor="middle">One Health. Connected.</text>
+        </svg>
+        <figcaption>Veterinary science meets AI: healthier animals, people and environments. Conceptual research map.</figcaption>
+      </figure>
+      </div>
+    </div>
+
+    <div class="facts" role="list">
+      <div class="fact" role="listitem"><b>4</b><span>papers, first author on all</span></div>
+      <div class="fact" role="listitem"><b>3,129</b><span>records screened across 11 databases</span></div>
+      <div class="fact" role="listitem"><b>46</b><span>Sensor Studies Synthesized for Review</span></div>
+      <div class="fact" role="listitem"><b>2</b><span>international congress talks, 2026</span></div>
+      <div class="fact" role="listitem"><b>USD 2,000</b><span>One Health project grant</span></div>
+    </div>
+
+    <section id="research">
+      <div class="sec-head">
+        <span class="label">Research focus</span>
+        <h2>Three threads, one question: how do we know an animal is well?</h2>
+        <p>I work where machine learning meets the barn floor, from model design to farmer interviews.</p>
+      </div>
+      <div class="areas">
+        <article class="area">
+          <span class="label">01 · Vision</span>
+          <h3>AI for animal welfare</h3>
+          <p>Computer vision for behaviour recognition and automated welfare assessment, with attention to whether systems are ready to leave the lab.</p>
+          <ul><li>Computer vision</li><li>Behaviour recognition</li><li>Welfare assessment</li></ul>
+        </article>
+        <article class="area">
+          <span class="label">02 · Sensing</span>
+          <h3>Precision livestock farming</h3>
+          <p>Wearable sensors, edge AI and signal processing for continuous, low-cost monitoring of individual animals.</p>
+          <ul><li>Wearables</li><li>TinyML / Edge AI</li><li>Time-series</li></ul>
+        </article>
+        <article class="area">
+          <span class="label">03 · Field</span>
+          <h3>One Health &amp; AMR</h3>
+          <p>Antimicrobial use patterns, risk determinants and ethnoveterinary practices in commercial poultry and ruminants.</p>
+          <ul><li>Epidemiology</li><li>Antibiotic use</li><li>Ethnoveterinary</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="sec-head">
+        <span class="label">Publications</span>
+        <h2>Peer-reviewed work</h2>
+      </div>
+      <ol class="pubs">
+        <li class="pub">
+          <div class="yr">2026</div>
+          <div>
+            <h3>Ethnoveterinary herbal practices are associated with reduced within-farm antibiotic use and improved farm performance in commercial poultry in Bangladesh: A multi-district cross-sectional study</h3>
+            <p class="au"><b>Nirjus, J. M.</b>, Saha, M., &amp; Sarker, R.</p>
+            <div class="venue"><em>Journal of Ethnopharmacology</em><span>vol. 373, 122316</span><a href="https://doi.org/10.1016/j.jep.2026.122316" target="_blank" rel="noopener noreferrer">doi:10.1016/j.jep.2026.122316</a></div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="yr">2026</div>
+          <div>
+            <h3>Computer vision for welfare monitoring in farmed ruminants: A scoping review of evidence, framework alignment, and deployment readiness</h3>
+            <p class="au"><b>Nirjus, J. M.</b> &amp; Whittaker, A. L.</p>
+            <div class="venue"><em>animal</em><span>102002</span><a href="https://doi.org/10.1016/j.animal.2026.102002" target="_blank" rel="noopener noreferrer">doi:10.1016/j.animal.2026.102002</a></div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="yr">2026</div>
+          <div>
+            <h3>Antimicrobial use patterns, risk determinants, and farmer typologies in commercial poultry production in Bangladesh: A multidimensional cross-sectional analysis under the One Health framework</h3>
+            <p class="au"><b>Nirjus, J. M.</b>, Hasan, M. S., Islam, M., et al., Saha, M., &amp; Thomson, P.</p>
+            <div class="venue"><em>Preventive Veterinary Medicine</em><span>vol. 258, 107057</span><a href="https://doi.org/10.1016/j.prevetmed.2026.107057" target="_blank" rel="noopener noreferrer">doi:10.1016/j.prevetmed.2026.107057</a></div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="yr">2025</div>
+          <div>
+            <h3>Cultural drivers of antimicrobial misuse: The impact of religious festivals on antibiotic use in ruminants in Bangladesh</h3>
+            <p class="au"><b>Nirjus, J. M.</b></p>
+            <div class="venue"><em>Journal of Research in Veterinary Sciences</em><span>5(3), 302–316</span><a href="https://doi.org/10.5455/jrvs.20250711071818" target="_blank" rel="noopener noreferrer">doi:10.5455/jrvs.20250711071818</a></div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="pipeline" aria-labelledby="pipeline-title">
+      <div class="sec-head">
+        <span class="label">Research in progress</span>
+        <h2 id="pipeline-title">Ongoing Research &amp; Manuscripts in Pipeline</h2>
+        <p>Active investigations connecting sensor evidence with livestock welfare and population health.</p>
+      </div>
+      <div class="pipeline-grid">
+        <article class="pipeline-card">
+          <span class="label">01 · Scoping review</span>
+          <h3>Wearable Sensor Analytics for Precision Welfare</h3>
+          <p>Scoping review synthesizing sensor mechanics, TinyML/Edge-AI feasibility, and signal processing across 46 studies.</p>
+          <p class="project-note">AWCAN Lab · University of Adelaide collaboration</p>
+          <ul class="project-tags" aria-label="Methods"><li>Wearable sensors</li><li>TinyML / Edge AI</li><li>Evidence synthesis</li></ul>
+        </article>
+        <article class="pipeline-card">
+          <span class="label">02 · Epidemiological study</span>
+          <h3>AMR Risk Profile in Border vs. Non-Border Livestock Corridors</h3>
+          <p>Multi-center epidemiological study analyzing transboundary antimicrobial resistance dynamics in Bangladesh.</p>
+          <p class="project-note">Bangladesh · Livestock corridors</p>
+          <ul class="project-tags" aria-label="Research themes"><li>One Health</li><li>AMR</li><li>Field epidemiology</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="fieldwork" aria-labelledby="fieldwork-title">
+      <div class="sec-head">
+        <span class="label">From evidence to practice</span>
+        <h2 id="fieldwork-title">Fieldwork &amp; Impact</h2>
+        <p>Research across farms, the laboratory and the community.</p>
+      </div>
+      <div class="fieldwork-grid">
+        <article class="fieldwork-card fieldwork-feature">
+          <div class="fieldwork-art" aria-hidden="true"><svg viewBox="0 0 360 180" fill="none"><path d="M20 140Q100 85 180 135T340 125M20 160Q100 105 180 155T340 145"/><path d="M60 100V60l35-25 35 25v40H60Zm25 0V77h20v23M60 60h70"/><path d="M230 55c0-26 40-26 40 0 0 18-20 38-20 38s-20-20-20-38Z"/><circle cx="250" cy="54" r="6"/><path d="m140 110 35-25 30 15 35-7" stroke-dasharray="4 7"/><circle cx="175" cy="85" r="4"/></svg><span>35+ districts</span></div>
+          <div class="fieldwork-copy"><span class="label">01 · Nationwide data collection</span><h3>Nationwide Field Survey</h3><p>Field data collection across 35+ districts, connecting farmer interviews and livestock production data with AMR research.</p></div>
+        </article>
+        <article class="fieldwork-card">
+          <div class="fieldwork-art" aria-hidden="true"><svg viewBox="0 0 360 180" fill="none"><rect x="100" y="35" width="160" height="95" rx="8"/><path d="M120 85h25l12-25 18 45 15-30 10 10h40M180 130v20m-35 0h70"/><circle cx="245" cy="50" r="3"/></svg><span>Precision livestock</span></div>
+          <div class="fieldwork-copy"><span class="label">02 · Laboratory research</span><h3>PSTU Precision Livestock Lab</h3><p>Animal welfare research at the intersection of livestock science, wearable sensing and data analysis.</p></div>
+        </article>
+        <article class="fieldwork-card">
+          <div class="fieldwork-art" aria-hidden="true"><svg viewBox="0 0 360 180" fill="none"><circle cx="180" cy="55" r="14"/><circle cx="125" cy="75" r="12"/><circle cx="235" cy="75" r="12"/><path d="M155 110V95c0-25 50-25 50 0v15M100 125v-15c0-23 45-23 45 0v15m70 0v-15c0-23 45-23 45 0v15M115 145q65 25 130 0M175 98h10m-5-5v10"/></svg><span>Babuganj · Barishal</span></div>
+          <div class="fieldwork-copy"><span class="label">03 · Community engagement</span><h3>OneHealthVillage Community Project</h3><p>Community surveys and courtyard-based education on AMR awareness and zoonotic risk in Babuganj, Barishal.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="sec-head">
+        <span class="label">Research experience</span>
+        <h2>Where the work happens</h2>
+      </div>
+      <div class="xp">
+        <article class="role">
+          <div class="when">2025 – Present</div>
+          <div>
+            <h3>Student Research Collaborator: AI, Animal Welfare &amp; Computer Vision</h3>
+            <p class="org">With Assoc. Prof. Alexandra L. Whittaker, University of Adelaide, Australia</p>
+            <ul>
+              <li>Contributed to a PRISMA-ScR scoping review of 3,129 records across 11 databases on computer vision in farmed ruminants. Led evidence synthesis and manuscript drafting; published in <em>animal</em>.</li>
+              <li>Synthesising sensor mechanics, TinyML and edge-AI feasibility, and signal-processing architectures across 46 studies for a review on wearable sensor analytics.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="role">
+          <div class="when">2025 – Present</div>
+          <div>
+            <h3>Student Research Collaborator: One Health, AMR &amp; Epidemiology</h3>
+            <p class="org">With Asst. Prof. Mousumi Saha, Gazipur Agricultural University</p>
+            <ul>
+              <li>Co-led two multi-district cross-sectional field studies on ethnoveterinary practices and antimicrobial use in commercial poultry. Lead papers published in <em>Journal of Ethnopharmacology</em> and <em>Preventive Veterinary Medicine</em>.</li>
+              <li>Supporting data processing, epidemiological modelling and literature synthesis for studies on zoonotic risk factors and bovine health.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="role">
+          <div class="when">2026 – Present</div>
+          <div>
+            <h3>Co-Investigator: OneHealthVillage Project</h3>
+            <p class="org">Funded by SEAOHUN, Chevron &amp; FAO (UN). Supervisor: Prof. Dr. Farzana Islam Rume, PSTU</p>
+            <ul>
+              <li>Supporting a community One Health intervention in Babuganj, Barishal, covering AMR awareness and zoonotic risk through behavioural surveys and courtyard-based education.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="role">
+          <div class="when">Dec 2023 – Present</div>
+          <div>
+            <h3>Undergraduate Researcher</h3>
+            <p class="org">Faculty of Animal Science and Veterinary Medicine, PSTU</p>
+            <ul>
+              <li>Lead questionnaire development, multi-district field data collection, farmer interviews on KoboToolbox, and data cleaning for AMR epidemiology and livestock production performance.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="honors">
+      <div class="sec-head">
+        <span class="label">Honors &amp; talks</span>
+        <h2>Recognition and conference presentations</h2>
+      </div>
+      <div class="two">
+        <article class="card win">
+          <span class="label">Winner · Grant recipient</span>
+          <h3>SEAOHUN Regional Student Competition 2026</h3>
+          <p>Southeast Asia One Health University Network, funded by Chevron &amp; FAO (UN).</p>
+          <p>One of 9 winning teams across Southeast Asia, India and Bangladesh in the One Health Campus-to-Community (OH-C2C) Challenge. Awarded project implementation funding of up to USD 2,000.</p>
+        </article>
+        <article class="card">
+          <span class="label">Oral presentations</span>
+          <div style="height:10px"></div>
+          <div class="talk">
+            <h4>Intelligent Compassion: The Role of Artificial Intelligence in Transforming Animal Welfare Across Veterinary, Agricultural, and Conservation Contexts</h4>
+            <p>5th International Paris Congress on Agriculture &amp; Animal Husbandry · Paris, France · June 2026</p>
+          </div>
+          <div class="talk">
+            <h4>Beyond the Prescription: A One Health Approach to AMR</h4>
+            <p>10th International Halich Congress on Multidisciplinary Scientific Research · Istanbul, Turkey · May 2026</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="sec-head">
+        <span class="label">Toolkit</span>
+        <h2>Skills and methods</h2>
+      </div>
+      <div class="skills">
+        <div class="skill"><h3>Programming</h3><ul><li>Python</li><li>SQL</li><li>NumPy</li><li>Pandas</li><li>Matplotlib</li><li>Scikit-learn</li><li>PyTorch</li></ul></div>
+        <div class="skill"><h3>AI &amp; vision</h3><ul><li>Computer vision</li><li>Object detection</li><li>Behaviour recognition</li></ul></div>
+        <div class="skill"><h3>Signals &amp; sensors</h3><ul><li>Time-series analysis</li><li>Signal processing</li><li>Wearable sensor data</li></ul></div>
+        <div class="skill"><h3>Statistics</h3><ul><li>SPSS</li><li>Logistic regression</li><li>Cluster analysis</li><li>Excel</li></ul></div>
+        <div class="skill"><h3>Research tools</h3><ul><li>Covidence</li><li>PRISMA-ScR</li><li>Overleaf (LaTeX)</li><li>KoboToolbox</li></ul></div>
+        <div class="skill"><h3>Bioinformatics</h3><ul><li>Sequence alignment</li><li>Basic genomic data analysis</li></ul></div>
+      </div>
+    </section>
+
+    <section id="training">
+      <div class="sec-head">
+        <span class="label">Certifications &amp; training</span>
+        <h2>Continuing education</h2>
+      </div>
+      <ul class="list">
+        <li><span class="k">2026</span><span>Genomics &amp; Computational Biology<small>Algorithms for DNA Sequencing; Python for Genomic Data Science · Johns Hopkins University, Coursera</small></span></li>
+        <li><span class="k">2025</span><span>Animal Behaviour &amp; Welfare<small>Animal Behaviour and Welfare; Animal Welfare in the Clinic · University of Edinburgh</small></span></li>
+        <li><span class="k">2025</span><span>Data Science &amp; AI<small>Data Analysis with Python; Python for Data Science, AI &amp; Development · IBM, Coursera</small></span></li>
+        <li><span class="k">2025</span><span>Scientific Writing<small>Writing in the Sciences · Stanford University</small></span></li>
+      </ul>
+    </section>
+
+    <section id="leadership">
+      <div class="sec-head">
+        <span class="label">Leadership &amp; service</span>
+        <h2>Beyond the lab</h2>
+      </div>
+      <ul class="list lead">
+        <li><span>Founder, <b>Animal Cortex</b><small>Science communication platform for animal AI and welfare</small></span><span class="k">Jul 2025 – Present</span></li>
+        <li><span>Associate Member, Overseas Studies Team, <b>PSTU Research Society</b></span><span class="k">Dec 2025 – Present</span></li>
+        <li><span>Executive Member, Volunteer &amp; Logistics, <b>Bioinformatics Club, PSTU</b></span><span class="k">Aug 2025 – Present</span></li>
+        <li><span>Assistant Organizing Secretary, <b>VASA</b> (Vet Sci &amp; AH Students' Association)</span><span class="k">Jul 2026 – Present</span></li>
+        <li><span>Founder, <b>Blood Warriors Society</b>; Assistant Campus Ambassador, WSDA NZ<small>Community outreach</small></span><span class="k">Community</span></li>
+      </ul>
+    </section>
+
+    <section id="contact" style="padding-top:0">
+      <div class="contact">
+        <div>
+          <span class="label" style="color:inherit;opacity:.65">Contact</span>
+          <h2 style="margin-top:10px">Let's work on animal welfare together.</h2>
+          <p>Open to research collaborations, graduate opportunities and conversations about AI, AMR and One Health.</p>
+        </div>
+        <dl>
+          <div><dt>Email</dt><dd><a id="mail" href="mailto:jubayernirjus@gmail.com">jubayernirjus@gmail.com</a><button class="copy" id="copyMail" type="button">Copy Email</button><span class="copy-status" id="copyStatus" role="status" aria-live="polite"></span></dd></div>
+          <div><dt>Profiles</dt><dd><a href="https://www.linkedin.com/in/jubayer-nirjus" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://orcid.org/0009-0006-4081-1512" target="_blank" rel="noopener noreferrer">ORCID 0009-0006-4081-1512</a></dd></div>
+          <div><dt>Academic profiles</dt><dd><a href="https://www.researchgate.net/profile/Jubayer-Mahmud-Nirjus-2?ev=hdr_xprf" target="_blank" rel="noopener noreferrer">ResearchGate</a> · <a href="https://scholar.google.com/citations?user=p2D6LysAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></dd></div>
+          <div><dt>Based at</dt><dd>Faculty of Animal Science and Veterinary Medicine, Patuakhali Science and Technology University, Bangladesh</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>B.Sc. Veterinary Science &amp; Animal Husbandry · PSTU · 2023 – 2028 (expected)</span>
+    <span>© 2026 Jubayer Mahmud Nirjus</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var btn=document.getElementById('themeBtn');
+  btn.addEventListener('click',function(){
+    var root=document.documentElement;
+    var cur=root.getAttribute('data-theme');
+    if(!cur){cur=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
+    root.setAttribute('data-theme',cur==='dark'?'light':'dark');
+  });
+  var cb=document.getElementById('copyMail');
+  var copyStatus=document.getElementById('copyStatus');
+  var copyTimer;
+  cb.addEventListener('click',async function(){
+    var mail=document.getElementById('mail');
+    cb.disabled=true;
+    clearTimeout(copyTimer);
+    try{
+      await navigator.clipboard.writeText(mail.textContent.trim());
+      cb.textContent='Copied!';
+      copyStatus.textContent='Email address copied to clipboard.';
+    }catch(e){
+      var range=document.createRange();
+      range.selectNodeContents(mail);
+      var selection=window.getSelection();
+      if(selection){selection.removeAllRanges();selection.addRange(range);}
+      cb.textContent='Copy Email';
+      copyStatus.textContent='Copy unavailable. Email selected; use your device’s copy command.';
+    }finally{
+      cb.disabled=false;
+      copyTimer=setTimeout(function(){cb.textContent='Copy Email';copyStatus.textContent='';},3000);
+    }
+  });
+})();
+</script>
+
+</body></html>
