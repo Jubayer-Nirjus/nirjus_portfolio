@@ -282,7 +282,7 @@ footer{margin-top:32px;font-family:var(--font-mono);font-size:12px;color:var(--m
         <div class="cta">
           <a class="btn primary" href="#publications">Read my papers</a>
           <a class="btn" href="#contact">Get in touch</a>
-          <a class="btn cv" id="cvBtn" href="assets/CV_Jubayer_Mahmud_Nirjus.pdf" download="CV_Jubayer_Mahmud_Nirjus.pdf" aria-label="Download CV (PDF)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg>Download CV (PDF)</a>
+          <a class="btn cv" id="cvBtn" href="assets/cv.pdf" download="cv.pdf" aria-label="Download CV (PDF)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg>Download CV (PDF)</a>
         </div>
       </div>
     </div>
@@ -633,7 +633,7 @@ footer{margin-top:32px;font-family:var(--font-mono);font-size:12px;color:var(--m
   /* CV download: tries the usual locations so it works whether the PDF sits in /assets or next to index.html */
   var cv=document.getElementById('cvBtn');
   if(cv){
-    var file='CV_Jubayer_Mahmud_Nirjus.pdf';
+    var file='cv.pdf';
     var paths=['assets/'+file,file,'assets/CV.pdf','CV.pdf','Assets/'+file];
     cv.addEventListener('click',function(e){
       if(location.protocol==='file:'){return;}
