@@ -18,6 +18,10 @@
   --tag-ink:#12202E;
   --teal:#0E6862;
   --teal-soft:#D6E7E2;
+  --panel:#14264A;
+  --panel-ink:#F4EFE4;
+  --panel-chip:#F4EFE4;
+  --panel-chip-ink:#14264A;
   --font-display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
   --font-body:'Public Sans','Segoe UI',system-ui,sans-serif;
   --font-mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
@@ -25,11 +29,11 @@
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
     --bg:#0E1926;--surface:#15243A;--fg:#E6ECF1;--muted:#9AABB9;--line:#273A52;
-    --tag:#F2B705;--tag-ink:#12202E;--teal:#52C7BB;--teal-soft:#16363A;color-scheme:dark}
+    --tag:#F2B705;--tag-ink:#12202E;--teal:#52C7BB;--teal-soft:#16363A;--panel:#1A3158;--panel-ink:#F4EFE4;--panel-chip:#F4EFE4;--panel-chip-ink:#14264A;color-scheme:dark}
 }
 :root[data-theme="dark"]{
   --bg:#0E1926;--surface:#15243A;--fg:#E6ECF1;--muted:#9AABB9;--line:#273A52;
-  --tag:#F2B705;--tag-ink:#12202E;--teal:#52C7BB;--teal-soft:#16363A;color-scheme:dark}
+  --tag:#F2B705;--tag-ink:#12202E;--teal:#52C7BB;--teal-soft:#16363A;--panel:#1A3158;--panel-ink:#F4EFE4;--panel-chip:#F4EFE4;--panel-chip-ink:#14264A;color-scheme:dark}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -43,7 +47,7 @@ a{color:var(--teal);text-underline-offset:3px}
 a:hover{text-decoration-thickness:2px}
 :focus-visible{outline:3px solid var(--tag);outline-offset:3px;border-radius:4px}
 .wrap{max-width:1080px;margin-inline:auto}
-section{padding-block:64px 8px;scroll-margin-top:16px}
+section{padding-block:64px 8px;scroll-margin-top:24px}
 h1,h2,h3{font-family:var(--font-display);text-wrap:balance;line-height:1.1;margin:0}
 .label{font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 h2{font-size:clamp(28px,4vw,40px);font-weight:700;letter-spacing:-.02em}
@@ -55,29 +59,31 @@ h2{font-size:clamp(28px,4vw,40px);font-weight:700;letter-spacing:-.02em}
 .mark{font-family:var(--font-mono);font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:10px;color:var(--fg);text-decoration:none}
 .mark i{display:inline-block;width:14px;height:20px;background:var(--tag);border-radius:3px 3px 7px 7px;position:relative}
 .mark i::after{content:"";position:absolute;left:50%;top:4px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:var(--bg)}
-nav{display:flex;gap:6px 18px;flex-wrap:wrap;font-size:14px;align-items:center}
+nav{display:flex;gap:6px 16px;flex-wrap:wrap;font-size:13.5px;align-items:center}
 nav a{color:var(--fg);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
 nav a:hover{border-color:var(--tag)}
 #themeBtn{font:500 12px var(--font-mono);letter-spacing:.06em;background:transparent;color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer}
 #themeBtn:hover{border-color:var(--fg)}
 
-/* hero */
-.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:center;padding-block:40px 24px}
-.hero-visuals{display:grid;gap:20px;min-width:0}
-.portrait{margin:0;padding:10px;background:var(--surface);border:1px solid var(--line);border-radius:14px}
-.portrait img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center 35%;border-radius:7px}
-.portrait figcaption{padding:12px 6px 4px;border-left:3px solid var(--tag);margin-top:10px;padding-left:12px}
-.portrait figcaption strong{display:block;font-family:var(--font-display);font-size:18px;line-height:1.3}
-.portrait figcaption span{display:block;font-family:var(--font-mono);font-size:11px;color:var(--muted);margin-top:4px}
-.status{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;
-  background:var(--tag);color:var(--tag-ink);padding:6px 14px 6px 10px;border-radius:4px 14px 14px 4px;font-weight:500}
-.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--tag-ink);opacity:.8}
-h1{font-size:clamp(44px,8vw,92px);font-weight:800;letter-spacing:-.035em;margin-block:22px 20px}
-h1 span{display:block}
-.lede{font-size:clamp(17px,2vw,20px);max-width:52ch;margin:0 0 26px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px;padding:0;list-style:none}
-.chips li{font-family:var(--font-mono);font-size:12px;padding:5px 11px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
-.cta{display:flex;flex-wrap:wrap;gap:10px}
+/* hero: profile card on the left (photo + research interests), identity and bio on the right */
+.hero{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:48px;align-items:start;padding-block:40px 24px}
+.profile-side{min-width:0}
+.portrait{margin:0}
+.portrait img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 30%;border-radius:4px 4px 0 0}
+.interests{background:var(--panel);color:var(--panel-ink);padding:26px 28px 30px;border-radius:0 0 4px 4px}
+.interests h2{font-size:26px;font-weight:700;letter-spacing:-.01em;margin-bottom:16px;color:var(--panel-ink)}
+.interests ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.interests li{font-family:var(--font-mono);font-size:13px;background:var(--panel-chip);color:var(--panel-chip-ink);padding:7px 14px;border-radius:3px}
+.identity{min-width:0}
+h1{font-size:clamp(40px,6.4vw,76px);font-weight:800;letter-spacing:-.035em;line-height:1;margin:0 0 26px}
+.roles{display:grid;gap:10px;margin:0 0 20px;font-size:17px}
+.roles p{margin:0}
+.roles .avail{font-weight:600;display:flex;align-items:center;gap:10px;color:var(--teal);margin-top:6px}
+.roles .avail svg{flex-shrink:0}
+.rule{border:0;border-top:1px solid var(--line);margin:24px 0}
+.bio{display:grid;gap:14px;font-size:17px;max-width:70ch}
+.bio p{margin:0}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
 .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;text-decoration:none;padding:12px 20px;border-radius:8px;border:1.5px solid var(--fg);color:var(--fg)}
 .btn.primary{background:var(--fg);color:var(--bg)}
 .btn:hover{transform:translateY(-1px)}
@@ -93,12 +99,21 @@ h1 span{display:block}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 /* facts strip */
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0;border-block:1px solid var(--line);margin-top:40px}
-.fact{padding:18px 18px 18px 0;display:flex;flex-direction:column;gap:2px;min-width:0}
-.fact b{font-family:var(--font-display);font-size:34px;font-weight:700;letter-spacing:-.02em;line-height:1;font-variant-numeric:tabular-nums}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:28px;border-top:1px solid var(--line)}
+.fact{padding:16px 16px 16px 0;display:flex;flex-direction:column;gap:2px;min-width:0;border-bottom:1px solid var(--line)}
+.fact b{font-family:var(--font-display);font-size:30px;font-weight:700;letter-spacing:-.02em;line-height:1;font-variant-numeric:tabular-nums}
 .fact span{font-size:13px;color:var(--muted)}
 
+/* education */
+.edu{display:grid;grid-template-columns:200px minmax(0,1fr);gap:8px 32px;padding-block:28px;border-block:1px solid var(--line)}
+.edu-when{font-family:var(--font-mono);font-size:13px;color:var(--muted);padding-top:4px}
+.edu h3{font-size:22px;font-weight:700;letter-spacing:-.01em;margin-bottom:4px}
+.edu-org{color:var(--teal);font-weight:600;font-size:15px;margin:0 0 12px}
+.edu ul{margin:0;padding-left:20px;display:grid;gap:8px;font-size:15.5px}
+.edu li::marker{color:var(--tag)}
+
 /* research areas */
+.research-map{max-width:680px;margin:32px auto 0}
 .areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 .area{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:12px;min-width:0}
 .area h3{font-size:22px;font-weight:700;letter-spacing:-.01em}
@@ -187,11 +202,13 @@ h1 span{display:block}
 footer{margin-top:32px;font-family:var(--font-mono);font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 
 @media (max-width:860px){
-  .hero{grid-template-columns:minmax(0,1fr)}
-  .role{grid-template-columns:minmax(0,1fr);gap:4px}
+  .hero{grid-template-columns:minmax(0,1fr);gap:32px}
+  .profile-side{max-width:420px}
+  .role,.edu{grid-template-columns:minmax(0,1fr);gap:4px}
   .contact{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:520px){
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
   .pub{grid-template-columns:minmax(0,1fr)}
   .pub .yr{font-size:26px}
   .list li{grid-template-columns:minmax(0,1fr)}
@@ -209,11 +226,13 @@ footer{margin-top:32px;font-family:var(--font-mono);font-size:12px;color:var(--m
       <a href="#education">Education</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
-      <a href="#pipeline">Pipeline</a>
+      <a href="#pipeline">Ongoing Research</a>
       <a href="#fieldwork">Fieldwork</a>
       <a href="#experience">Experience</a>
       <a href="#honors">Honors</a>
       <a href="#skills">Skills</a>
+      <a href="#training">Training</a>
+      <a href="#leadership">Leadership</a>
       <a href="#contact">Contact</a>
       <button id="themeBtn" type="button" aria-label="Switch colour theme">THEME</button>
     </nav>
@@ -221,34 +240,103 @@ footer{margin-top:32px;font-family:var(--font-mono);font-size:12px;color:var(--m
 
   <main id="top">
     <div class="hero">
-      <div>
-        <span class="status">Undergraduate researcher · PSTU, Bangladesh</span>
-        <h1><span>Jubayer</span><span>Mahmud</span><span>Nirjus</span></h1>
-        <p class="lede">I’m a veterinary science student and early-career researcher with a passion for improving animal health and welfare through science and technology. My work brings together artificial intelligence, precision livestock farming and One Health to address real challenges in animal production and public health.
-          <br><br>
+      <aside class="profile-side">
+        <figure class="portrait">
+          <img src="images/Profile_pic.png" alt="Portrait of Jubayer Mahmud Nirjus">
+        </figure>
+        <div class="interests">
+          <h2>Research Interests</h2>
+          <ul>
+            <li>AI for Animal Welfare</li>
+            <li>Precision Livestock Farming</li>
+            <li>One Health</li>
+            <li>Antimicrobial Resistance</li>
+            <li>Computer Vision</li>
+            <li>Wearable Sensing</li>
+          </ul>
+        </div>
+      </aside>
 
-I have authored multiple peer-reviewed publications and collaborate with researchers across international institutions. I am committed to producing rigorous, practical research that benefits animals, farmers and communities.
-          <br><br>
-
-I am always open to research collaborations and new opportunities..</p>
-        <ul class="chips" aria-label="Research focus">
-          <li>AI for Animal Welfare</li>
-          <li>Precision Livestock Farming</li>
-          <li>One Health &amp; AMR</li>
-        </ul>
+      <div class="identity">
+        <h1>Jubayer Mahmud Nirjus</h1>
+        <div class="roles">
+          <p>Undergraduate Researcher, Veterinary Science</p>
+          <p>Faculty of Animal Science and Veterinary Medicine</p>
+          <p>Patuakhali Science and Technology University (PSTU), Bangladesh</p>
+          <p class="avail"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Open to research collaborations</p>
+        </div>
+        <hr class="rule">
+        <div class="bio">
+          <p>I’m a veterinary science student and early-career researcher with a passion for improving animal health and welfare through science and technology. My work brings together artificial intelligence, precision livestock farming and One Health to address real challenges in animal production and public health.</p>
+          <p>I have authored multiple peer-reviewed publications and collaborate with researchers across international institutions. I am committed to producing rigorous, practical research that benefits animals, farmers and communities.</p>
+          <p>I am always open to research collaborations and new opportunities.</p>
+        </div>
+        <div class="facts" role="list">
+          <div class="fact" role="listitem"><b>3 × Q1</b><span>first-author Elsevier papers</span></div>
+          <div class="fact" role="listitem"><b>4</b><span>papers, first author on all</span></div>
+          <div class="fact" role="listitem"><b>3,129</b><span>records screened across 11 databases</span></div>
+          <div class="fact" role="listitem"><b>46</b><span>sensor studies synthesised in review</span></div>
+          <div class="fact" role="listitem"><b>2</b><span>international congress talks, 2026</span></div>
+          <div class="fact" role="listitem"><b>USD 2,000</b><span>One Health project grant</span></div>
+        </div>
         <div class="cta">
           <a class="btn primary" href="#publications">Read my papers</a>
           <a class="btn" href="#contact">Get in touch</a>
           <a class="btn cv" href="assets/CV_Jubayer_Mahmud_Nirjus.pdf" download="CV_Jubayer_Mahmud_Nirjus.pdf" aria-label="Download CV (PDF)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg>Download CV (PDF)</a>
         </div>
       </div>
+    </div>
 
-      <div class="hero-visuals">
-      <figure class="portrait">
-        <img src="images/Profile_pic.png" alt="Jubayer Mahmud Nirjus" style="object-fit: cover; object-position: center 70%;">
-        <figcaption><strong>PSTU, Bangladesh</strong><span>Faculty of Animal Science and Veterinary Medicine </span></figcaption>
-      </figure>
-      <figure class="vis research-figure" style="margin:0">
+    
+    <section id="education">
+      <div class="sec-head">
+        <span class="label">Academic background</span>
+        <h2>Education</h2>
+      </div>
+      <article class="edu">
+        <div class="edu-when">Nov 2023 – Dec 2028<br>(expected)</div>
+        <div>
+          <h3>B.Sc. in Veterinary Science &amp; Animal Husbandry</h3>
+          <p class="edu-org">Faculty of Animal Science and Veterinary Medicine, Patuakhali Science and Technology University (PSTU)</p>
+          <ul>
+            <li><strong>Curriculum:</strong> five-year programme across 10 semesters, 182 credit hours.</li>
+            <li><strong>Core focus:</strong> Veterinary Epidemiology, Preventive Veterinary Medicine, Pharmacology &amp; Therapeutics, Pathology, Microbiology &amp; Virology, Veterinary Public Health, Animal Genetics &amp; Breeding, Animal Nutrition, Clinical Medicine &amp; Surgery, AMR Epidemiology.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+      
+        
+
+    <section id="research">
+      <div class="sec-head">
+        <span class="label">Research focus</span>
+        <h2>Research</h2>
+        <p>Three threads, one question: how do we know an animal is well? I work where machine learning meets the barn floor, from model design to farmer interviews.</p>
+      </div>
+      <div class="areas">
+        <article class="area">
+          <span class="label">01 · Vision</span>
+          <h3>AI for animal welfare</h3>
+          <p>Computer vision for behaviour recognition and automated welfare assessment, with attention to whether systems are ready to leave the lab.</p>
+          <ul><li>Computer vision</li><li>Behaviour recognition</li><li>Welfare assessment</li></ul>
+        </article>
+        <article class="area">
+          <span class="label">02 · Sensing</span>
+          <h3>Precision livestock farming</h3>
+          <p>Wearable sensors, edge AI and signal processing for continuous, low-cost monitoring of individual animals.</p>
+          <ul><li>Wearables</li><li>TinyML / Edge AI</li><li>Time-series</li></ul>
+        </article>
+        <article class="area">
+          <span class="label">03 · Field</span>
+          <h3>One Health &amp; AMR</h3>
+          <p>Antimicrobial use patterns, risk determinants and ethnoveterinary practices in commercial poultry and ruminants.</p>
+          <ul><li>Epidemiology</li><li>Antibiotic use</li><li>Ethnoveterinary</li></ul>
+        </article>
+      </div>
+      <div class="research-map">
+        <figure class="vis research-figure" style="margin:0">
         <svg viewBox="0 0 520 430" role="img" aria-labelledby="research-figure-title research-figure-desc">
           <title id="research-figure-title">One Health, connected by research</title>
           <desc id="research-figure-desc">A cow at the centre of a connected research network, linking AI and wearable sensing, people and antimicrobial resistance, and the environment. A conceptual figure of Jubayer's veterinary research interests.</desc>
@@ -300,71 +388,12 @@ I am always open to research collaborations and new opportunities..</p>
         <figcaption>Veterinary science meets AI: healthier animals, people and environments. Conceptual research map.</figcaption>
       </figure>
       </div>
-    </div>
-
-    <div class="facts" role="list">
-      <div class="fact" role="listitem"><b>3x Q1</b><span>First-Author Elsevier Papers</span></div>
-      <div class="fact" role="listitem"><b>4</b><span>papers, first author on all</span></div>
-      <div class="fact" role="listitem"><b>3,129</b><span>records screened across 11 databases</span></div>
-      <div class="fact" role="listitem"><b>46</b><span>Sensor Studies Synthesized for Review</span></div>
-      <div class="fact" role="listitem"><b>2</b><span>international congress talks, 2026</span></div>
-      <div class="fact" role="listitem"><b>USD 2,000</b><span>One Health project grant</span></div>
-    </div>
-    <section id="education">
-      <div class="sec-head">
-        <span>Academic Background</span>
-        <h2>Education</h2>
-      </div>
-      <div>
-    <div>
-      <div>
-        <h3>B.Sc. in Vet. Sci. &amp; A.H.</h3>
-        <p>Faculty of Animal Science and Veterinary Medicine, Patuakhali Science and Technology University (PSTU)</p>
-      </div>
-      <span>Nov 2023 – Dec 2028 (Expected)</span>
-    </div>
-    <ul>
-      <li><strong>Curriculum &amp; Scale:</strong> Intensive 5-year curriculum spanning 10 semesters (182 total credit hours)</li>
-      <li><strong>Core Focus:</strong> Veterinary Epidemiology, Preventive Veterinary Medicine, Pharmacology &amp; Therapeutics, Pathology, Microbiology &amp; Virology, Veterinary Public Health, Animal Genetics &amp; Breeding, Animal Nutrition, Clinical Medicine &amp; Surgery &amp; AMR Epidemiology</li>
-    </ul>
-  </div>
-</section>
-
-      
-        
-
-    <section id="research">
-      <div class="sec-head">
-        <span class="label">Research focus</span>
-        <h2>Three threads, one question: how do we know an animal is well?</h2>
-        <p>I work where machine learning meets the barn floor, from model design to farmer interviews.</p>
-      </div>
-      <div class="areas">
-        <article class="area">
-          <span class="label">01 · Vision</span>
-          <h3>AI for animal welfare</h3>
-          <p>Computer vision for behaviour recognition and automated welfare assessment, with attention to whether systems are ready to leave the lab.</p>
-          <ul><li>Computer vision</li><li>Behaviour recognition</li><li>Welfare assessment</li></ul>
-        </article>
-        <article class="area">
-          <span class="label">02 · Sensing</span>
-          <h3>Precision livestock farming</h3>
-          <p>Wearable sensors, edge AI and signal processing for continuous, low-cost monitoring of individual animals.</p>
-          <ul><li>Wearables</li><li>TinyML / Edge AI</li><li>Time-series</li></ul>
-        </article>
-        <article class="area">
-          <span class="label">03 · Field</span>
-          <h3>One Health &amp; AMR</h3>
-          <p>Antimicrobial use patterns, risk determinants and ethnoveterinary practices in commercial poultry and ruminants.</p>
-          <ul><li>Epidemiology</li><li>Antibiotic use</li><li>Ethnoveterinary</li></ul>
-        </article>
-      </div>
     </section>
 
     <section id="publications">
       <div class="sec-head">
-        <span class="label">Publications</span>
-        <h2>Peer-reviewed work</h2>
+        <span class="label">Peer-reviewed work</span>
+        <h2>Publications</h2>
       </div>
       <ol class="pubs">
         <li class="pub">
@@ -404,8 +433,8 @@ I am always open to research collaborations and new opportunities..</p>
 
     <section id="pipeline" aria-labelledby="pipeline-title">
       <div class="sec-head">
-        <span class="label">Research in progress</span>
-        <h2 id="pipeline-title">Ongoing Research &amp; Manuscripts in Pipeline</h2>
+        <span class="label">Manuscripts in pipeline</span>
+        <h2 id="pipeline-title">Ongoing Research</h2>
         <p>Active investigations connecting sensor evidence with livestock welfare and population health.</p>
       </div>
       <div class="pipeline-grid">
@@ -428,8 +457,8 @@ I am always open to research collaborations and new opportunities..</p>
 
     <section id="fieldwork" aria-labelledby="fieldwork-title">
       <div class="sec-head">
-        <span class="label">From evidence to practice</span>
-        <h2 id="fieldwork-title">Fieldwork &amp; Impact</h2>
+        <span class="label">Impact &amp; community</span>
+        <h2 id="fieldwork-title">Fieldwork</h2>
         <p>Research across farms, the laboratory and the community.</p>
       </div>
       <div class="fieldwork-grid">
@@ -451,7 +480,7 @@ I am always open to research collaborations and new opportunities..</p>
     <section id="experience">
       <div class="sec-head">
         <span class="label">Research experience</span>
-        <h2>Where the work happens</h2>
+        <h2>Experience</h2>
       </div>
       <div class="xp">
         <article class="role">
@@ -501,8 +530,8 @@ I am always open to research collaborations and new opportunities..</p>
 
     <section id="honors">
       <div class="sec-head">
-        <span class="label">Honors &amp; talks</span>
-        <h2>Recognition and conference presentations</h2>
+        <span class="label">Recognition &amp; talks</span>
+        <h2>Honors</h2>
       </div>
       <div class="two">
         <article class="card win">
@@ -528,8 +557,8 @@ I am always open to research collaborations and new opportunities..</p>
 
     <section id="skills">
       <div class="sec-head">
-        <span class="label">Toolkit</span>
-        <h2>Skills and methods</h2>
+        <span class="label">Skills &amp; methods</span>
+        <h2>Skills</h2>
       </div>
       <div class="skills">
         <div class="skill"><h3>Programming</h3><ul><li>Python</li><li>SQL</li><li>NumPy</li><li>Pandas</li><li>Matplotlib</li><li>Scikit-learn</li><li>PyTorch</li></ul></div>
@@ -543,8 +572,8 @@ I am always open to research collaborations and new opportunities..</p>
 
     <section id="training">
       <div class="sec-head">
-        <span class="label">Certifications &amp; training</span>
-        <h2>Continuing education</h2>
+        <span class="label">Certifications &amp; courses</span>
+        <h2>Training</h2>
       </div>
       <ul class="list">
         <li><span class="k">2026</span><span>Genomics &amp; Computational Biology<small>Algorithms for DNA Sequencing; Python for Genomic Data Science · Johns Hopkins University, Coursera</small></span></li>
@@ -556,8 +585,8 @@ I am always open to research collaborations and new opportunities..</p>
 
     <section id="leadership">
       <div class="sec-head">
-        <span class="label">Leadership &amp; service</span>
-        <h2>Beyond the lab</h2>
+        <span class="label">Service &amp; community</span>
+        <h2>Leadership</h2>
       </div>
       <ul class="list lead">
         <li><span>Founder, <b>Animal Cortex</b><small>Science communication platform for animal AI and welfare</small></span><span class="k">Jul 2025 – Present</span></li>
